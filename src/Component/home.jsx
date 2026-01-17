@@ -23,69 +23,101 @@ import { CiSearch } from "react-icons/ci";
 import { FaBars } from "react-icons/fa"; 
 import { Button } from "../components/ui/button"; 
 import firstimg from "../assets/TRS01154.JPG";
+import secimage from "../assets/TRS01155.JPG";
+import threeimage from "../assets/TRS01151.JPG";
 import Navbar from "./Navbar";
-
-// const navigation = [
-//   { name: "NEW IN COLLECTIONS", href: "#", current: false },
-//   { name: "DRESSES", href: "/about", current: false },
-//   { name: "SHOP BY CATEGORY", href: "#", current: false },
-//   { name: "SHOP BY COLOR", href: "#", current: false },
-// ];
-
  
-// const posts = [
-//   {
-//     id: 1,
-//     title: "Boost your conversion rate",
-//     href: "#",
-//     description:
-//       "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-//     date: "Mar 16, 2020",
-//     datetime: "2020-03-16",
-//     category: { title: "Marketing", href: "#" },
-//     author: {
-//       name: "Michael Foster",
-//       role: "Co-Founder / CTO",
-//       href: "#",
-//       imageUrl:
-//         "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-//     },
-//   },
-//   {
-//     id: 2,
-//     title: "How to use search engine optimization to drive sales",
-//     href: "#",
-//     description:
-//       "Optio cum necessitatibus dolor voluptatum provident commodi et. Qui aperiam fugiat nemo cumque.",
-//     date: "Mar 10, 2020",
-//     datetime: "2020-03-10",
-//     category: { title: "Sales", href: "#" },
-//     author: {
-//       name: "Lindsay Walton",
-//       role: "Front-end Developer",
-//       href: "#",
-//       imageUrl:
-//         "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-//     },
-//   },
-//   {
-//     id: 3,
-//     title: "Improve your customer experience",
-//     href: "#",
-//     description:
-//       "Cupiditate maiores ullam eveniet adipisci in doloribus nulla minus. Voluptas iusto libero adipisci rem et corporis. Nostrud sint anim sunt aliqua. Nulla eu labore irure incididunt velit cillum quis magna dolore.",
-//     date: "Feb 12, 2020",
-//     datetime: "2020-02-12",
-//     category: { title: "Business", href: "#" },
-//     author: {
-//       name: "Tom Cook",
-//       role: "Director of Product",
-//       href: "#",
-//       imageUrl:
-//         "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-//     },
-//   },
-// ];
+
+
+
+
+
+
+
+// Carousel 1 images
+import TRS00960 from "../assets/TRS00960.JPG";
+import TRS00961 from "../assets/TRS00961.JPG";
+import TRS01024 from "../assets/TRS01024.JPG";
+import TRS01025 from "../assets/TRS01025.JPG";
+import TRS01026 from "../assets/TRS01026.JPG";
+import TRS01027 from "../assets/TRS01027.JPG";
+
+// Carousel 2 images
+import TRS01028 from "../assets/TRS00825.JPG";
+import TRS01060 from "../assets/TRS00930.JPG";
+import TRS01061 from "../assets/TRS00911.JPG";
+import TRS01064 from "../assets/TRS00907.JPG";
+import TRS01079 from "../assets/TRS00904.JPG";
+import TRS01083 from "../assets/TRS00902.JPG";
+
+
+// 🔥 FIRST CAROUSEL
+const carouselOneImages = [
+  {
+    image: TRS00960,
+    name: "Black Lace Evening Gown",
+    price: "Rs. 5,999",
+  },
+  {
+    image: TRS00961,
+    name: "Elegant Halter Neck Dress",
+    price: "Rs. 5,799",
+  },
+  {
+    image: TRS01024,
+    name: "Ruched Party Wear Gown",
+    price: "Rs. 6,199",
+  },
+  {
+    image: TRS01025,
+    name: "Classic Black Evening Dress",
+    price: "Rs. 5,499",
+  },
+  {
+    image: TRS01026,
+    name: "Designer Draped Gown",
+    price: "Rs. 5,899",
+  },
+  {
+    image: TRS01027,
+    name: "Luxury Social Wear Gown",
+    price: "Rs. 6,299",
+  },
+];
+
+// 🔥 SECOND CAROUSEL
+const carouselTwoImages = [
+  {
+    image: TRS01028,
+    name: "Modern Halter Neck Gown",
+    price: "Rs. 5,999",
+  },
+  {
+    image: TRS01060,
+    name: "Evening Glam Party Dress",
+    price: "Rs. 6,199",
+  },
+  {
+    image: TRS01061,
+    name: "Classic Black Draped Dress",
+    price: "Rs. 5,699",
+  },
+  {
+    image: TRS01064,
+    name: "Premium Designer Gown",
+    price: "Rs. 6,499",
+  },
+  {
+    image: TRS01079,
+    name: "Luxury Social Moment Dress",
+    price: "Rs. 6,299",
+  },
+  {
+    image: TRS01083,
+    name: "Signature Evening Wear Gown",
+    price: "Rs. 6,599",
+  },
+];
 
 export default function Home() {
   return (
@@ -119,74 +151,28 @@ export default function Home() {
           </div>
           <div class="overflow-hidden rounded-xl shadow-lg  cursor-pointer">
             <img
-              src="https://sotbella.com/cdn/shop/files/asymmetric-cut-out-evening-gown-sotbella-1.webp?v=1756463233"
+              src={secimage}
               alt="Image 2"
               class=" object-cover transition-transform duration-500 hover:scale-120"
             />
           </div>
           <div class="overflow-hidden rounded-xl shadow-lg cursor-pointer ">
             <img
-              src="https://sotbella.com/cdn/shop/files/DSC01074_8c0f656f-1917-4a65-8d78-0d45b1df7d2a.jpg?v=1764414021&width=1080"
+              src={threeimage}
               alt="Image 2"
               class=" object-cover transition-transform duration-500 hover:scale-120"
             />
           </div>
         </div>
       </div>
+ {/* First Carousel */}
+      <CarouselPlugin data={carouselOneImages} />
 
-      <CarouselPlugin />
-      {/* <div className="bg-gray-900 py-2 ">
-        <div className="mx-auto max-w-11/12  pb-24">
-          <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16  border-gray-700 pt-10 sm:mt-6 sm:pt-6 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {posts.map((post) => (
-              <article
-                key={post.id}
-                className="flex max-w-xl flex-col items-start justify-between"
-              >
-                <div className="flex items-center gap-x-4 text-xs">
-                  <time dateTime={post.datetime} className="text-gray-400">
-                    {post.date}
-                  </time>
-                  <a
-                    href={post.category.href}
-                    className="relative z-10 rounded-full bg-gray-800/60 px-3 py-1.5 font-medium text-gray-300 hover:bg-gray-800"
-                  >
-                    {post.category.title}
-                  </a>
-                </div>
-                <div className="group relative grow">
-                  <h3 className="mt-3 text-lg/6 font-semibold text-white group-hover:text-gray-300">
-                    <a href={post.href}>
-                      <span className="absolute inset-0" />
-                      {post.title}
-                    </a>
-                  </h3>
-                  <p className="mt-5 line-clamp-3 text-sm/6 text-gray-400">
-                    {post.description}
-                  </p>
-                </div>
-                <div className="relative mt-8 flex items-center gap-x-4 justify-self-end">
-                  <img
-                    alt=""
-                    src={post.author.imageUrl}
-                    className="size-10 rounded-full bg-gray-800"
-                  />
-                  <div className="text-sm/6">
-                    <p className="font-semibold text-white">
-                      <a href={post.author.href}>
-                        <span className="absolute inset-0" />
-                        {post.author.name}
-                      </a>
-                    </p>
-                    <p className="text-gray-400">{post.author.role}</p>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div> */}
-
+      {/* Featured Section */}
+      <h2 className="text-center text-4xl font-semibold my-10">
+        Fashion Fusion
+      </h2>
+  
       <div className="mt-5">
         <p className="text-center text-2xl mb-3 font-bold">FEATURED IN</p>
         <div className="flex justify-center border-t-2 border-black  border-b-2   gap-5">
@@ -210,7 +196,9 @@ export default function Home() {
           Fashion Fusion
         </p>
       </div>
-         <CarouselPlugin />
+    {/* Second Carousel */}
+      <CarouselPlugin data={carouselTwoImages} />
+
 
       <div className="text-center text-3xl mt-10 ">FAQs</div>
 

@@ -9,8 +9,12 @@ import {
   MenuItems,
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon, BellIcon } from "@heroicons/react/24/outline";
-import { FaShoppingBag, FaUser, FaBars } from "react-icons/fa";
+import { FaShoppingBag, FaUser, FaBars, FaHeart } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
+import WishlistDrawer from "./WishlistDrawer";
+// ✅ WISHLIST CONTEXT
+import { useWishlist, WishlistProvider } from "@/context/WishlistContext";
+// import WishlistDrawer from "@/components/WishlistDrawer";
 
 const navigation = [
   { name: "NEW IN COLLECTIONS", href: "/", current: false },
@@ -26,7 +30,10 @@ function classNames(...classes) {
 const Navbar = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
-  // ESC key close
+  // ✅ WISHLIST STATE
+  const { wishlist, setOpenWishlist } = useWishlist();
+
+  // ESC key close search
   useEffect(() => {
     const handleEsc = (e) => {
       if (e.key === "Escape") setIsSearchOpen(false);
@@ -38,7 +45,10 @@ const Navbar = () => {
   return (
     <>
       {/* NAVBAR */}
-      <Disclosure as="nav" className="bg-black border-b border-white/10 sticky top-0 z-50 p-7">
+      <Disclosure
+        as="nav"
+        className="bg-black border-b border-white/10 sticky top-0 z-50 p-7"
+      >
         {({ open }) => (
           <>
             <div className="mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,10 +94,27 @@ const Navbar = () => {
                     className="h-6 w-6 cursor-pointer"
                     onClick={() => setIsSearchOpen(true)}
                   />
+
                   <FaUser className="h-5 w-5 cursor-pointer" />
                   <BellIcon className="h-6 w-6 cursor-pointer" />
+
+                  {/* ❤️ WISHLIST ICON */}
+                  <div
+  className="relative cursor-pointer"
+  onClick={() => setOpenWishlist(true)}
+>
+  <FaHeart className="h-5 w-5 text-white" />
+  {wishlist.length > 0 && (
+    <span className="absolute -top-2 -right-2 bg-red-500 text-xs px-1 rounded-full">
+      {wishlist.length}
+    </span>
+  )}
+</div>
+
+
                   <FaShoppingBag className="h-5 w-5 cursor-pointer" />
 
+                  {/* Profile Menu */}
                   <Menu as="div" className="relative">
                     <MenuButton />
                     <MenuItems className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md py-1 shadow-lg">
@@ -210,6 +237,10 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+      {/* ❤️ WISHLIST OFF-CANVAS */}
+      <WishlistDrawer />
+
     </>
   );
 };

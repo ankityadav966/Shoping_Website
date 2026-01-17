@@ -2,6 +2,37 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import { Progress } from "@/components/ui/progress";
 
+import TRS00960 from "../assets/TRS00960.JPG";
+import TRS00961 from "../assets/TRS00961.JPG";
+import TRS01024 from "../assets/TRS01024.JPG";
+import TRS01025 from "../assets/TRS01025.JPG";
+import TRS01026 from "../assets/TRS01026.JPG";
+import TRS01027 from "../assets/TRS01027.JPG";
+import TRS01028 from "../assets/TRS01028.JPG";
+import TRS01060 from "../assets/TRS01060.JPG";
+import TRS01061 from "../assets/TRS01061.JPG";
+import TRS01064 from "../assets/TRS01064.JPG";
+import TRS01079 from "../assets/TRS01079.JPG";
+import TRS01083 from "../assets/TRS01083.JPG";
+import TRS01085 from "../assets/TRS01085.JPG";
+import { CarouselPlugin } from "@/card";
+
+
+
+
+import TRS00745 from "../assets/TRS00745.JPG";
+import TRS00746 from "../assets/TRS00746.JPG";
+import TRS00747 from "../assets/TRS00747.JPG";
+import TRS00739 from "../assets/TRS00739.JPG";
+import TRS00738 from "../assets/TRS00738.JPG";
+import TRS00783 from "../assets/TRS00783.JPG";
+import TRS00784 from "../assets/TRS00784.JPG";
+import { WishlistProvider } from "@/context/WishlistContext";
+
+
+
+
+
 
 const About = () => {
  
@@ -10,67 +41,114 @@ const About = () => {
   {
     title: "BLACK AND GOLD EVENING GOWN",
     price: "Rs. 5,999.00",
-    image: "https://sotbella.com/cdn/shop/files/DSC01447_df4a712c-66f3-4f25-880b-7c944541b856.jpg?v=1763104447&width=1080",
-    hoverImage: "https://sotbella.com/cdn/shop/files/SAC30-10-25_8815_f6ab4831-3e5e-4ad4-b3fe-28baff49c751.jpg?v=1763098827&width=1080",
+    image: TRS00960,
+    hoverImage: TRS00961,
   },
   {
     title: "WHITE RUFFLE NECK FLOWY SHIRT",
     price: "Rs. 1,739.00",
-    image: "https://sotbella.com/cdn/shop/files/SAC30-10-25_8815_f6ab4831-3e5e-4ad4-b3fe-28baff49c751.jpg?v=1763098827&width=1080",
-    hoverImage: "https://sotbella.com/cdn/shop/files/DSC01447_df4a712c-66f3-4f25-880b-7c944541b856.jpg?v=1763104447&width=1080",
+    image: TRS01024,
+    hoverImage: TRS01025,
   },
   {
     title: "RED HALTER NECK RUCHED GOWN",
     price: "Rs. 5,799.00",
-    image: "https://sotbella.com/cdn/shop/files/DSC01447_df4a712c-66f3-4f25-880b-7c944541b856.jpg?v=1763104447&width=1080",
-    hoverImage: "https://sotbella.com/cdn/shop/files/SAC30-10-25_8815_f6ab4831-3e5e-4ad4-b3fe-28baff49c751.jpg?v=1763098827&width=1080",
+    image: TRS01026,
+    hoverImage: TRS01027,
   },
   {
     title: "BLACK DRAPED GOWN WITH...",
     price: "Rs. 5,599.00",
-    image: "https://sotbella.com/cdn/shop/files/SAC30-10-25_8815_f6ab4831-3e5e-4ad4-b3fe-28baff49c751.jpg?v=1763098827&width=1080",
-    hoverImage: "https://sotbella.com/cdn/shop/files/DSC01447_df4a712c-66f3-4f25-880b-7c944541b856.jpg?v=1763104447&width=1080",
+    image: TRS01028,
+    hoverImage: TRS01060,
   },
   {
     title: "BLACK DRAPED GOWN WITH...",
     price: "Rs. 5,599.00",
-    image: "https://sotbella.com/cdn/shop/files/DSC01434_c72867ef-ee31-4012-8cfb-b28f13abc3c7.jpg?v=1763104447&width=1080",
-    hoverImage: "https://sotbella.com/cdn/shop/files/DSC01447_df4a712c-66f3-4f25-880b-7c944541b856.jpg?v=1763104447&width=1080",
+    image: TRS01061,
+    hoverImage: TRS01064,
   },
   {
     title: "BLACK DRAPED GOWN WITH...",
     price: "Rs. 5,599.00",
-    image: "https://sotbella.com/cdn/shop/files/cap-443.jpg?v=1756462739&width=1080",
-    hoverImage: "https://sotbella.com/cdn/shop/files/DSC01447_df4a712c-66f3-4f25-880b-7c944541b856.jpg?v=1763104447&width=1080",
+    image: TRS01079,
+    hoverImage: TRS01083,
   },
   {
     title: "BLACK DRAPED GOWN WITH...",
     price: "Rs. 5,599.00",
-    image: "https://sotbella.com/cdn/shop/files/cap-611-2.jpg?v=1756462733&width=1080",
-    hoverImage: "https://sotbella.com/cdn/shop/files/cap-552.jpg?v=1756462734&width=1080",
-  },
-  {
-    title: "BLACK DRAPED GOWN WITH...",
-    price: "Rs. 5,599.00",
-    image: "https://sotbella.com/cdn/shop/files/embellished-halter-neck-dress-535386.jpg?v=1756463039&width=1080",
-    hoverImage: "https://sotbella.com/cdn/shop/files/embellished-halter-neck-dress-790875.jpg?v=1756463040&width=1080",
+    image: TRS01085,
+    hoverImage: TRS00960,
   },
 ];
 
+
+
+
+const carouselTwoImages = [
+  {
+    image: TRS00745,
+    name: "Blue Evening Gown",
+    price: "Rs. 5,999",
+  },
+  {
+    image: TRS00746,
+    name: "Ruched Halter Dress",
+    price: "Rs. 5,799",
+  },
+  {
+    image: TRS00747,
+    name: "Party Wear Gown",
+    price: "Rs. 6,199",
+  },
+  {
+    image: TRS00739,
+    name: "Classic Black Dress",
+    price: "Rs. 5,499",
+  },
+  {
+    image: TRS00738,
+    name: "Elegant Evening Dress",
+    price: "Rs. 5,899",
+  },
+  {
+    image: TRS00783,
+    name: "Designer Halter Gown",
+    price: "Rs. 6,299",
+  },
+  {
+    image: TRS00784,
+    name: "Luxury Party Gown",
+    price: "Rs. 6,499",
+  },
+];
+
+
+
+const sliderItems = [...products, ...products];
+
 const [index, setIndex] = useState(0);
 const [activeTab, setActiveTab] = useState("details");
+const [isPaused, setIsPaused] = useState(false);
+// const { toggleWishlistItem } = useWishlist();
 
   // 🔁 Auto slide
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 4) % products.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
+  if (isPaused) return;
+
+  const interval = setInterval(() => {
+    setIndex((prev) => (prev + 1) % products.length);
+  }, 3000);
+
+  return () => clearInterval(interval);
+}, [isPaused, products.length]);
+;
   return (
     <div>
       <div className="sticky top-0 w-[99%] z-1">
+        {/* <WishlistProvider> */}
         <Navbar />
+        {/* </WishlistProvider> */}
       </div>
 
       <section className="w-full bg-white py-12">
@@ -91,13 +169,16 @@ const [activeTab, setActiveTab] = useState("details");
             </div>
 
 
-            <div className="w-full lg:sticky lg:top-32  self-start">
-              <img
-                src="https://sotbella.com/cdn/shop/files/DSC01447_df4a712c-66f3-4f25-880b-7c944541b856.jpg?v=1763104447&width=1080"
-                alt="product"
-                className="w-full h-[75vh] object-cover"
-              />
-            </div>
+            <div className="w-full lg:sticky lg:top-32 self-start">
+  <div className="relative w-full aspect-[3/4] bg-[#f6f6f6] flex items-center justify-center">
+    <img
+      src="https://sotbella.com/cdn/shop/files/DSC01447_df4a712c-66f3-4f25-880b-7c944541b856.jpg?v=1763104447&width=1080"
+      alt="product"
+      className="max-w-full max-h-full object-contain"
+    />
+  </div>
+</div>
+
 
 
             <div className="space-y-6">
@@ -361,63 +442,49 @@ const [activeTab, setActiveTab] = useState("details");
     </div>
 
       {/* RECENTLY VIEWED */}
-        <div className="pt-12 relative overflow-hidden">
-      <h4 className="text-sm font-semibold mb-6">RECENTLY VIEWED</h4>
+        <div
+  className="pt-12 relative overflow-hidden"
+  onMouseEnter={() => setIsPaused(true)}
+  onMouseLeave={() => setIsPaused(false)}
+>
+  <h4 className="text-sm font-semibold mb-6">RECENTLY VIEWED</h4>
 
-      <div
-        className="flex transition-transform duration-700 ease-in-out"
-        style={{ transform: `translateX(-${index * 25}%)` }}
-      >
-        {products.map((item, i) => (
-          <div key={i} className="min-w-[25%] px-2">
-            <div className="group cursor-pointer">
-              
-              {/* IMAGE */}
-              <div className="relative overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full object-cover transition-opacity duration-300 group-hover:opacity-0"
-                />
-                <img
-                  src={item.hoverImage}
-                  alt="hover"
-                  className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                />
-              </div>
-
-              {/* TEXT */}
-              <div className="mt-3 text-sm">
-                <p className="font-serif uppercase leading-tight">
-                  {item.title}
-                </p>
-                <p className="font-semibold mt-1">{item.price}</p>
-              </div>
-            </div>
+  <div
+    className="flex transition-transform duration-700 ease-in-out"
+    style={{ transform: `translateX(-${index * 25}%)` }}
+  >
+    {sliderItems.map((item, i) => (
+      <div key={i} className="min-w-[25%] px-2">
+        <div className="group cursor-pointer">
+          <div className="relative aspect-[3/4] bg-[#f6f6f6] overflow-hidden">
+            <img
+              src={item.image}
+              alt={item.title}
+              className="w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-0"
+            />
+            <img
+              src={item.hoverImage}
+              alt="hover"
+              className="absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            />
           </div>
-        ))}
+
+          <div className="mt-3 text-sm">
+            <p className="font-serif uppercase leading-tight">
+              {item.title}
+            </p>
+            <p className="font-semibold mt-1">{item.price}</p>
+          </div>
+        </div>
       </div>
+    ))}
+  </div>
+</div>
 
-      {/* ARROWS */}
-      <button
-        onClick={() =>
-          setIndex((prev) => (prev - 1 + products.length) % products.length)
-        }
-        className="absolute left-0 top-1/2 -translate-y-1/2 bg-black text-white p-2"
-      >
-        ‹
-      </button>
 
-      <button
-        onClick={() =>
-          setIndex((prev) => (prev + 1) % products.length)
-        }
-        className="absolute right-0 top-1/2 -translate-y-1/2 bg-black text-white p-2"
-      >
-        ›
-      </button>
-    </div>
 
+
+<CarouselPlugin data={carouselTwoImages} />
 
 
 

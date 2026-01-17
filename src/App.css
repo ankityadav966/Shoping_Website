@@ -7,3 +7,29 @@ body {
 body::-webkit-scrollbar {
   display: none;                /* Chrome, Safari */
 }
+.heart-burst {
+  font-size: 72px;              /* thoda bada heart */
+  animation: heartPop 1s ease-out forwards;
+}
+
+@keyframes heartPop {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+
+  30% {
+    transform: scale(1.4);      /* BIG POP */
+    opacity: 1;
+  }
+
+  70% {
+    transform: scale(1.1);      /* thoda hold */
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;                 /* smooth fade out */
+  }
+}
